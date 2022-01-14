@@ -1,6 +1,8 @@
 
 This git repo contains the Dockerfile needed to build a container that supports CUDA develoment.  This is 
-available to help with the use of the `kbmod` program.   The container is meant for use on CANFAR science portal but can be used anywhere you can run a docker container.
+available to help with the use of the [kbmod](https://github.com/dirac-institute/kbmod) program.   Note that the `kbmod` directory in this project is a submodule of the primary kbmod project and likely should be modified to be a branch that works for this specific way of installing kbomd. 
+
+The container is meant for use on CANFAR science portal but can be used anywhere you can run a docker container.
 
 There is a Makefile to aid building and pushing.
 
