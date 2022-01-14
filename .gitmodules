@@ -1,0 +1,3 @@
+[submodule "kbmod"]
+	path = kbmod
+	url = https://github.com/dirac-institute/kbmod
