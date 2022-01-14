@@ -1,0 +1,18 @@
+name: base
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.7
+  - pip
+  - astropy
+  - pandas
+  - scikit-learn
+  - scikit-image
+
+  - pip:
+    - cadcdata
+    - cadctap
+    - vos
+
