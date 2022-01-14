@@ -12,11 +12,20 @@ There is a Makefile to aid building and pushing.
 
 ## push the docker contianer **
 *to be allowed to PUSH you must first login to the canfar docker repository. This only needs to be done once per device where you run docker push
-When you login you will be asked for your password.  This is your 'CLI Secret' for images.canfar.net which you can find in the 'User Profile' area on the images.canfar.net site *
+When you login you will be asked for your password.  This is your 'CLI Secret' for images.canfar.net which you can find in the 'User Profile' area on the images.canfar.net site*
 
-docker login -u ${CANFAR_USER_NAME} images.canfar.net 
+`docker login -u ${CANFAR_USER_NAME} images.canfar.net `
 
-make push
+`make push`
+
+## Tag the image.
+The last step before you can use this container is to go to the images.canfar.net site, navigate to the container image you just loaded and use the Action mention to tag that image as a notebook type.
+
+## Launch the image on a GPU.  
+To run this image on the CANFAR Science Portal GPU server try this:
+
+`curl -E ~/.ssl/cadcproxy.pem "https://ws-uv.canfar.net/skaha/session?gpus=1" -d "name=kbmod" -d "image=images.canfar.net/uvickbos/kbmod:0.1"`
+
 
 
 
