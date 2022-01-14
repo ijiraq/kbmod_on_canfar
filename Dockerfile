@@ -20,5 +20,12 @@ RUN apt-get -y clean
 RUN rm nvhpc-22-1_22.1_amd64.deb
 RUN rm nvhpc-2022_22.1_amd64.deb 
 
+RUN apt-get install -y cmake
+RUN apt-get -y install xterm 
+RUN apt-get -y install emacs
+
+# COPY kbmod ./ 
+# WORKDIR kbmod
+# RUN source install.bash
 
 CMD [ "bash" ]
